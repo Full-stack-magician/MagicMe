@@ -1,9 +1,9 @@
 <template>
-  <div
-    id="app4456"
-    :style="{ backgroundImage: 'url(' + require('@/assets/278017.jpg') + ')' }"
-  >
-    <div></div>
+<div>
+  <div class="background">
+    <img :src="imgSrc" width="100%" height="100%" alt="" />
+    </div>
+    <div class="front">
     <el-row>
       <el-col id="waikuang">
         <el-row>
@@ -66,6 +66,7 @@
       </el-col>
     </el-row>
   </div>
+</div>
 </template>
 <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
@@ -82,7 +83,6 @@ export default {
   },
   methods: {
     getshuju() {
-    
       axios
         .get("http://127.0.0.1:8000/axios-server", {
           params: {
@@ -98,14 +98,19 @@ export default {
           name: 'Home'
         })
          }
-         
          else
          alert("login failed")
         });
     },
   },
+    data () {
+    return {
+      imgSrc: require('../assets/278017.jpg')
+    }
+  }
 };
 </script>
+
 <style scoped>
 html {
   height: 100%;
@@ -192,7 +197,7 @@ body {
   height: 400px;
 
   position: absolute;
-  top: 200px;
+  top: 80px;
   left: 560px;
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
@@ -205,5 +210,21 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+</style>
+
+<style>
+  .background {
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;  /**宽高100%是为了图片铺满屏幕 */
+    z-index:-1;
+    position: absolute;
+}
+
+.front{
+    z-index:1;
+    position: absolute;
 }
 </style>
