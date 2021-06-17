@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login_fail</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='register.css')}}">
+    <style>
+        span {
+            position: absolute;
+            height: 500px;
+            width: 100px;
+            left: 15%;
+            top: 20%;
+            font-size: 100px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <span>注册</span>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <input type="text" name="id" id="id" placeholder="请输入账号">
+        <input type="password" name="password" id="password" placeholder="请输入密码">
+        <input type="submit" value="注册" id="submit">
+    </form>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <style>
+        * {
+            position: relative;
+            margin: 0 auto;
+            height: 100px;
+            width: 1500px;
+
+        }
+
+        font {
+            display: block;
+            font-size: 60px;
+            height: 100px;
+        }
+
+        #success {
+            width: 235px;
+
+        }
+
+        #result {
+            width: 1024px;
+            color: red;
+        }
+
+        #tips {
+            width: 1027px;
+
+        }
+
+        #img {
+            width: 500px;
+            height: 500px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<font id="success">success!</font>
+<font id="result">{{result}}</font>
+
+<font id="tips">签退成功 签退成功 签退成功 签退成功</font>
+<img id="img" src="{{url_for('static',filename ='buffer/show.jpg')}}">
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+.father {
+            position: relative;
+            height: 1000px;
+            background: url("pic/bc_pic2.jpg") fixed repeat;
+        }
+
+        .father .input {
+            position: absolute;
+            height: 50px;
+            width: 260px;
+            font-size: 40px;
+            right: 42%;
+            box-sizing: border-box;
+        }
+
+        .father #id {
+            top: 30%;
+        }
+
+        .father #password {
+            top: 40%;
+        }
+
+        .father .submit {
+            position: absolute;
+            top: 50%;
+            margin-right: 85px;
+            height: 50px;
+            width: 120px;
+            font-size: 35px;
+            box-sizing: border-box;
+        }
+
+        .father .submit#login {
+            right: 45%;
+        }
+
+        .father .submit#register {
+            right: 38%;
+        }
+
+        #title {
+            position: absolute;
+            height: 500px;
+            width: 100px;
+            right: 20%;
+            top: 15%;
+            font-size: 100px;
+            color: white;
+        }
