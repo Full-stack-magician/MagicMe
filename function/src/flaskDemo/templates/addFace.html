@@ -19,20 +19,97 @@
     <meta charset="utf-8">
     <script src="{{ url_for('static', filename='jquery-1.7.1.min.js') }}"></script>
     <!--<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>-->
+    <style>
+        .father {
+            position: relative;
+            height: 940px;
+            /*background: url("pic/bc_pic1.jpg") repeat;*/
+        }
+
+        .father input {
+            position: absolute;
+            top: 65%;
+            height: 50px;
+            width: 260px;
+            font-size: 40px;
+            box-sizing: border-box;
+        }
+
+        .father .two_pics {
+            position: absolute;
+            top: 8%;
+            height: 500px;
+            weight: 1000px;
+            background-color: black;
+            right: 50%;
+            margin-right: -500px;
+        }
+
+        #open {
+            left: 23%;
+        }
+
+        #upload {
+            left: 63%;
+        }
+
+        #name1 {
+            top: 75%;
+            left: 23%;
+        }
+
+        #id1 {
+            top: 75%;
+            left: 63%;
+        }
+
+        #submit {
+            top: 85%;
+            left: 50%;
+            margin-left: -130px;
+        }
+
+        span#title1 {
+            position: absolute;
+            height: 500px;
+            width: 100px;
+            left: 10%;
+            top: 8%;
+            font-size: 100px;
+            color: black;
+        }
+
+        span#title2 {
+            position: absolute;
+            height: 500px;
+            width: 100px;
+            right: 10%;
+            top: 8%;
+            font-size: 100px;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-<form action="/addInfoSuccess" method="post" enctype="multipart/form-data">
-name：<input type="text" name="name" id="name">
-id：<input type="text" name="id" id="id">
-    <input type="submit" value="submit">
-</form>
-<br>
-<input type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia()"/>
-<video id="video" width="500px" height="500px" autoplay="autoplay"></video>
-<canvas id="canvas" width="500px" height="500px"></canvas>
-<button id="snap" onclick="takePhoto()">拍照</button>
-<button id="close" onclick="closeMedia()">关闭</button>
-<button id="upload" onclick="uploadImage()"  type="submit">上传</button>
+
+
+<div class="father">
+
+    <span id="title1">添加人脸</span>
+    <span id="title2">添加人脸</span>
+    <div class="two_pics">
+        <video id="video" width="500px" height="500px" autoplay="autoplay"></video>
+        <canvas id="canvas" width="500px" height="500px"></canvas>
+    </div>
+
+    <input id="open" type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia()"/>
+    <input id="upload" onclick="uploadImage()" type="submit" value="上传">
+    <form action="/addInfoSuccess" method="post" enctype="multipart/form-data">
+        <input type="text" name="name1" id="name1" placeholder="请输入姓名">
+        <input type="text" name="id1" id="id1" placeholder="请输入ID">
+        <input type="submit" value="submit" id="submit">
+    </form>
+</div>
 
 <script>
 
@@ -84,9 +161,9 @@ id：<input type="text" name="id" id="id">
     var context = canvas.getContext('2d');
 
     function uploadImage() {
-        canvas.width = 300;
-        canvas.height = 300;
-        context.drawImage(video, 0, 0, 300, 300);
+        canvas.width = 500;
+        canvas.height = 500;
+        context.drawImage(video, 0, 0, 500, 500);
         var imgData = canvas.toDataURL("image/jpg");
         imgData = imgData.replace(/^data:image\/(png|jpg);base64,/, "")
         //上传到后台。

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login_fail</title>
+    <style>
+        .father {
+            position: relative;
+            height: 940px;
+            width: 1800px;
+        }
+
+        .tips {
+            position: absolute;
+            height: 150px;
+            width: 1360px;
+            background-color: red;
+            top: 20%;
+            font-size: 80px;
+            right: 50%;
+            margin-right: -680px;
+            line-height: 150px;
+        }
+
+        input {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            height: 50px;
+            width: 260px;
+            font-size: 40px;
+            box-sizing: border-box;
+        }
+
+        #button1 {
+            margin-right: -334px;
+        }
+        #button2 {
+            margin-right: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <font class="tips">账号密码不匹配，重新输入或注册账号</font>
+    <form action="/jump_to_login" method="post" enctype="multipart/form-data">
+        <input type="submit" class="button" id="button1" value="重新输入">
+    </form>
+    <form action="/jump_to_register" method="post" enctype="multipart/form-data">
+        <input type="submit" class="button" id="button2" value="我要注册">
+    </form>
+
+</div>
+</body>
+</html>
