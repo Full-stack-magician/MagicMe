@@ -1,0 +1,27 @@
+.father {
+    position: relative;
+    height: 940px;
+    background: url("pic/bc_pic4.jpg") fixed repeat;
+}
+
+input {
+    position: absolute;
+    right: 43%;
+    height: 50px;
+    width: 260px;
+    margin: 0;
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+#id {
+    top: 25%;
+}
+
+#password {
+    top: 35%;
+}
+
+#submit {
+    top: 45%;
+}

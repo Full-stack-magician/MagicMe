@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摄像</title>
+<style type="text/css">
+  body{
+      text-align: center;
+      background-color: #f8e6ce;
+  }
+</style>
+<script type="text/javascript">
+
+  function change(){
+    var videofile = document.getElementById('getvideo').files[0];
+    var url = URL.createObjectURL(videofile);
+    var videos =document.getElementById("myVideo")
+    videos.src = url;
+  }
+
+</script>
+
+</head>
+
+<body>
+  <video id="myVideo" controls width="350" height="200">
+    <source type="video/mp4" />
+    <source type="video/webm" />
+    <source type="video/ogg" />
+  </video>
+  <input type="file" id='getvideo' accept="video/*" capture="camcorder" style="display:none" onchange="change()">
+  <p><button onclick="getvideo.click();">点击摄像</button></p>
+</body>
+
+</html>

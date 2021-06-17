@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='index.css')}}">
+    <!--<style>-->
+
+        <!--.father {-->
+            <!--position: relative;-->
+            <!--height: 940px;-->
+            <!--background: url("pic/bc_pic1.jpg");-->
+        <!--}-->
+
+        <!--.father .son {-->
+            <!--position: absolute;-->
+            <!--height: 200px;-->
+            <!--width: 200px;-->
+            <!--background-color: rgba(135, 206, 250, 0.6);-->
+        <!--}-->
+
+        <!--.father .son#son1 {-->
+            <!--top: 20%;-->
+            <!--left: 20%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son2 {-->
+            <!--top: 20%;-->
+            <!--left: 40%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son3 {-->
+            <!--top: 20%;-->
+            <!--left: 60%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son4 {-->
+            <!--top: 20%;-->
+            <!--left: 80%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son5 {-->
+            <!--top: 50%;-->
+            <!--left: 20%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son6 {-->
+            <!--top: 50%;-->
+            <!--left: 40%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son7 {-->
+            <!--top: 50%;-->
+            <!--left: 60%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--.father .son#son8 {-->
+            <!--top: 50%;-->
+            <!--left: 80%;-->
+            <!--margin-left: -100px;-->
+        <!--}-->
+
+        <!--font {-->
+            <!--color: black;-->
+            <!--font-size: 30px;-->
+        <!--}-->
+
+        <!--a {-->
+            <!--display: block;-->
+            <!--text-decoration: none;-->
+            <!--height: 200px;-->
+            <!--width: 200px;-->
+            <!--text-align: center;-->
+            <!--line-height: 200px;-->
+        <!--}-->
+
+        <!--a:hover {-->
+            <!--background-color: rgba(255, 255, 255, 1);-->
+        <!--}-->
+    <!--</style>-->
+
+</head>
+<body>
+<div class="father">
+    <div class="son" id="son1"><a href="signIn"><font>人脸打卡签到</font></a></div>
+    <div class="son" id="son2"><a href="signOut"><font color="black" size="5px">人脸打卡签退</font></a></div>
+    <div class="son" id="son3"><a href="addFace"><font color="black" size="5px">添加人脸</font></a></div>
+    <div class="son" id="son4"><a href="updateLib"><font color="black" size="5px">更新识别数据</font></a></div>
+    <div class="son" id="son5"><a href="statistics"><font color="black" size="5px">信息统计</font></a></div>
+    <div class="son" id="son6"><a href="nothing"><font color="black" size="5px">动漫化</font></a></div>
+    <div class="son" id="son7"><a href="nothing"><font color="black" size="5px">性别识别</font></a></div>
+    <div class="son" id="son8"><a href="nothing"><font color="black" size="5px">年龄识别</font></a></div>
+</div>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>index</title>-->
+<!--<link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='index.css')}}">-->
+
+
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--<div class="header1">-->
+<!--<div class="center">-->
+<!--<div class="welcome">-->
+<!--<span>欢迎您！请登录</span>-->
+<!--<a href="#">免费注册</a>-->
+<!--</div>-->
+<!--<div class="nav">-->
+<!--<ul>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--<li><a href="#">#！%！@#！@￥！%</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;    <div class="header2 center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="logo">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="pic/logo.png" height="56" width="175"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="search">&ndash;&gt;-->
+<!--&lt;!&ndash;            <input class="input" type="search">&ndash;&gt;-->
+<!--&lt;!&ndash;            <input class="button" type="button" value="搜索" style="cursor: pointer">&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="recommond">&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a href="#">*&^%^%</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="shoppingcar">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p><a href="#"> 我的购物车</a></p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--</header>-->
+
+<!--<div class="banner center">-->
+<!--<div class="navaside">-->
+<!--<ul>-->
+<!--<li class="title">功能:</li>-->
+<!--<li><a href="signIn">人脸打卡签到</a></li>-->
+<!--<li><a href="signOut">人脸打卡签退</a></li>-->
+<!--<li><a href="addFace">添加人脸</a></li>-->
+<!--<li><a href="updateLib">更新识别数据</a></li>-->
+<!--<li><a href="statistics">统计</a></li>-->
+<!--<li><a href="test">test</a></li>-->
+<!--<li><a href="videoFaceRecognition">视频人脸检测</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="navtop">-->
+<!--<ul>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--<li><a href="#">$%#$#^##^%</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!--<div class="ad">-->
+<!--<img src="pic/bigad.png" height="536" width="848"/>-->
+<!--</div>-->
+<!--<div class="bulletin">-->
+<!--<ul>-->
+<!--<li class="title"><a href="#">#@$@%@#%: </a></li>-->
+<!--<li><a href="#">[@#]￥#￥￥%#&……*</a></li>-->
+<!--<li><a href="#">[@#]￥#￥￥%#&……*</a></li>-->
+<!--<li><a href="#">[@#]￥#￥￥%#&……*</a></li>-->
+<!--<li><a href="#">[@#]￥#￥￥%#&……*</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="shortcut">-->
+<!--<ul>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--<li><a href="#"></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="ad2">-->
+<!--<img src="pic/logo.png" height="56" width="175"/>-->
+<!--</div>-->
+<!--<div class="bottomad center">-->
+<!--<div class="today">-->
+<!--<p class="p1"></p><br>-->
+<!--<p class="p2">今日推荐</p>-->
+<!--</div>-->
+<!--<ul>-->
+<!--<li><a href="#"><img src="pic/bottomad1.png" alt="" width="289px" height="193px"></a></li>-->
+<!--<li><a href="#"><img src="pic/bottomad2.png" alt="" width="289px" height="193px"></a></li>-->
+<!--<li><a href="#"><img src="pic/bottomad1.png" alt="" width="289px" height="193px"></a></li>-->
+<!--<li><a href="#"><img src="pic/bottomad2.png" alt="" width="289px" height="193px"></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="guess center">-->
+<!--<ul>-->
+<!--<li class="title"><p>猜猜你喜欢:</p></li>-->
+<!--<li class="change"><a href="#">换一批</a></li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><img src="pic/guess1.png" alt="" height="177px" width="233px"></a>-->
+<!--<p>&^%$#@!@#$%</p>-->
+<!--<p class="price">￥300</p>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!--<footer>-->
+<!--<div class="footer1 center">-->
+<!--<ul>-->
+<!--<li><a href="#"><img src="pic/footer2.png" alt=""></a>-->
+<!--<p>ahadadffd</p></li>-->
+<!--<li></li>-->
+<!--<li></li>-->
+<!--<li></li>-->
+<!--<li></li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!--<div class="footer2 center">-->
+
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--<div>-->
+<!--<dl>-->
+<!--<dt>$#@%#@%$@#$</dt>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--<dd><a href="#">$#@$@$$@</a></dd>-->
+<!--</dl>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="footer3 center">-->
+<!--<div class="info">-->
+<!--<ul>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--<li><a href="#">$#@%$@</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="address">-->
+<!--<p>%#@^$%@#$%*&^%$#@#$%**#$%%(*&^%$###^$%$%#^*^$%^#634#%$@%#@</p>-->
+<!--<p>@$#%$^*^Y$$E#R#T$T</p>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</footer>-->
+
+<!--</body>-->
+<!--</html>-->
