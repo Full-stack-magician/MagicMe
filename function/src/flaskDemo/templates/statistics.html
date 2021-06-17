@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>statistic</title>
+    <style>
+        span {
+            position: absolute;
+            height: 200px;
+            width: 100px;
+            left: 7%;
+            top: 8%;
+            font-size: 100px;
+            color: black;
+        }
+        table{
+            position: absolute;
+            margin-left: -650px;
+            left: 50%;
+            top: 25%;
+
+        }
+    </style>
+</head>
+<body>
+<form action="/statistic" method="post" enctype="multipart/form-data">
+</form>
+<span>信息统计</span>
+
+<table  border="1" cellspacing="0" width="1300px" cellpadding="5" style="font-size: 50px">
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+        <td>签到时间</td>
+        <td>签退时间</td>
+    </tr>
+    <tr>
+        <td>{{result1}}</td>
+        <td>{{result2}}</td>
+        <td>{{result3}}</td>
+        <td>{{result4}}</td>
+    </tr>
+    <tr>
+        <td>{{result5}}</td>
+        <td>{{result6}}</td>
+        <td>{{result7}}</td>
+        <td>{{result8}}</td>
+    </tr>
+        <tr>
+        <td>{{result9}}</td>
+        <td>{{result10}}</td>
+        <td>{{result11}}</td>
+        <td>{{result12}}</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拍照</title>
+<style type="text/css">
+    body{
+        text-align: center;
+        background-color: #f8e6ce;
+    }
+</style>
+<script type="text/javascript">
+
+    function change(){
+
+       var imagefile= document.getElementById("image").files[0];
+       var reads = new FileReader();
+       reads.readAsDataURL(imagefile);
+
+       reads.onload = function(e) {
+
+        document.getElementById('imageId').src = this.result;
+
+       };
+
+    }
+
+</script>
+</head>
+
+<body>
+    <img style="width:350px;height:200px;border:2px dashed black;" id="imageId">
+    <input type="file" id='image' style="display:none" accept="image/*" capture='camera' onchange="change()">
+    <p><button onclick="image.click();">点击拍照</button></p>
+</body>
+
+</html>
